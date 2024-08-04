@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr/" install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 	use !minimal &&
 	cp /usr/bin/sinit "${D}"/sbin/
 }
