@@ -8,7 +8,7 @@ Patch by Plat
  lk_runsvc /etc/rc/tty6 0
  
 +log "alsa-without-udev-fix"
-+lk_runsvc /etc/rc/alsa-wo-udev
++lk_runsvc /etc/rc/alsa-wo-udev 0
 +
  # Uncomment if needed
  # lk_runsvc /etc/rc/sddm 0
