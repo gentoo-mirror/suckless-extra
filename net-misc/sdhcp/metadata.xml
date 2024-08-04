@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>plat@stellar-nexus.ru</email>
+<name>Plat</name>
+</maintainer>
+<longdescription>
+sdhcp is a simple, tiny DHCP client. It runs until it enters the "Bound" state, then forks to the background and runs as a daemon to keep the lease alive.
+</longdescription>
+</pkgmetadata>

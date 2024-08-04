@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>plat@stellar-nexus.ru</email>
+<name>Plat</name>
+</maintainer>
+<longdescription>
+LittKit is a set of shellscripts to implement ordered-startup and run-once capabilities within daemontools, daemontools-encore, and other daemontools-inspired software.
+</longdescription>
+</pkgmetadata>

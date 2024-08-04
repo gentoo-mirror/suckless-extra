@@ -1,0 +1,14 @@
+A simple fix for some systems failing to boot without remounting
+Patch by Plat
+
+--- sinit-scripts-main/bin/rc.init
++++ sinit-scripts-main/bin/rc.init
+@@ -58,6 +58,8 @@
+ [ "$HOSTNAME" ] && echo "$HOSTNAME" >| /proc/sys/kernel/hostname
+ 
+ echo;
++mount -o remount /
++echo;
+ echo "Starting daemontools-encore..."
+ 
+ lk_prepare /etc/rc
