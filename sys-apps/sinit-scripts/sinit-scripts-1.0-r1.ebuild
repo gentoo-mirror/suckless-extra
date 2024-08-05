@@ -47,6 +47,7 @@ pkg_postinst() {
 	ln -s /sbin/shutdown /sbin/reboot
 	ln -s /sbin/shutdown /sbin/poweroff
 	ln -s /var/rc/* /etc/rc/
+	echo
 	ewarn "You may need to add new services."
 	ewarn "To add new services run:"
 	ewarn "mkdir /var/rc/service_name"
@@ -56,7 +57,9 @@ pkg_postinst() {
 	ewarn "chmod u+x /var/rc/service_name/run"
 	ewarn "ln -s /var/rc/service_name /etc/rc/"
 	ewarn "# Add \"log 'service_name'\" (optionally) and \"lk_runsvc /etc/rc/service_name 0\" to /etc/rc/dtinit/dtinit.sh"
+	echo
 	elog " -< Succeeded. Now you can reboot >- "
+	echo
 	[ -f ${ROOT}/etc/hostname ] ||
 	ewarn "File ${ROOT}/etc/hostname is missing. Copy /etc/localhost or create one"
 }
