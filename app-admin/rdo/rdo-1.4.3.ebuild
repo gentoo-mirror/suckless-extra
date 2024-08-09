@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="virtual/libcrypt"
+RDEPEND="virtual/libcrypt:="
 
 src_prepare() {
 	default
@@ -35,4 +35,12 @@ src_install() {
 	dodir bin
 	dodir etc
 	emake DESTDIR="${D}" install
+}
+
+pkg_postinst() {
+	elog "The configuration file has been placed at /etc/rdo.conf"
+	elog "It has the following variables:"
+	elog "group: The group of users that is allowed to execute rdo."
+	elog "wrong_pw_sleep: The amount of milliseconds to sleep at a wrong password attempt. Must be a positive integer. Set to 0 to disable."
+	elog "session_ttl: The amount of minutes a session lasts. Must be a positive integer. Set to 0 to disable."
 }
