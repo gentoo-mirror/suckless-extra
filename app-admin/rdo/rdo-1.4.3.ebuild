@@ -7,7 +7,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="RootDO, a simple doas/sudo alternative."
 HOMEPAGE="https://codeberg.org/sw1tchbl4d3/rdo"
-SRC_URI="https://codeberg.org/sw1tchbl4d3/rdo/archive/main.tar.gz -> rdo.tar.gz"
+SRC_URI="https://codeberg.org/sw1tchbl4d3/rdo/archive/main.tar.gz -> ${P}.tar.gz"
 
 S="${WORKDIR}"/"$PN"
 

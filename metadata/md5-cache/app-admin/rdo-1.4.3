@@ -1,9 +1,12 @@
-DEFINED_PHASES=-
+DEFINED_PHASES=compile install prepare
 DESCRIPTION=RootDO, a simple doas/sudo alternative.
 EAPI=8
 HOMEPAGE=https://codeberg.org/sw1tchbl4d3/rdo
+INHERIT=toolchain-funcs
 KEYWORDS=~amd64
 LICENSE=GPL-3
+RDEPEND=virtual/libcrypt
 SLOT=0
-SRC_URI=https://codeberg.org/sw1tchbl4d3/rdo
-_md5_=78a01898b3e490d9fd3d705e3fa8010e
+SRC_URI=https://codeberg.org/sw1tchbl4d3/rdo/archive/main.tar.gz -> rdo-1.4.3.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_md5_=7171d1d98dcca45bf594a10a50ea2871
