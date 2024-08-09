@@ -1,9 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=a set of shell scripts to implement oredered-startup and run-once capabilities
-EAPI=8
-HOMEPAGE=https://troubleshooters.com/projects/littkit
-KEYWORDS=~amd64
-LICENSE=MIT
-SLOT=0
-SRC_URI=https://troubleshooters.com/projects/littkit/downloads/littkit_0_90.tgz
-_md5_=ab35990af21dce189012351db8c87322
