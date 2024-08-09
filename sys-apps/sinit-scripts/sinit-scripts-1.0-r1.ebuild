@@ -7,9 +7,9 @@ inherit savedconfig
 
 DESCRIPTION="Collection of services for suckless init"
 HOMEPAGE="https://github.com/Andrey0189/sinit-scripts"
-SRC_URI="https://github.com/Andrey0189/sinit-scripts/archive/refs/heads/main.tar.gz"
+SRC_URI="https://github.com/Andrey0189/sinit-scripts/archive/refs/heads/main.tar.gz -> sinit-scripts.tar.gz"
 
-S="${S%1.0}main"
+S="${WORKDIR}"/"$PN"-main
 
 LICENSE="MIT"
 SLOT="0"
@@ -37,7 +37,7 @@ src_install() {
 	dodir var/rc
 	cp -r ./var/rc "${D}"/var/
 	keepdir etc/rc
-	into /
+	into ${ROOT}
 	dobin ./bin/*
 	dosbin ./sbin/*
 	save_config var/rc/dtinit/dtinit.sh

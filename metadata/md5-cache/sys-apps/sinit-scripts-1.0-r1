@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst prepare
+DEPEND=sys-apps/sinit
+DESCRIPTION=Collection of services for suckless init
+EAPI=8
+HOMEPAGE=https://github.com/Andrey0189/sinit-scripts
+INHERIT=savedconfig
+IUSE=savedconfig
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=sys-apps/sinit sys-process/daemontools-encore sys-apps/littkit
+SLOT=0
+SRC_URI=https://github.com/Andrey0189/sinit-scripts/archive/refs/heads/main.tar.gz
+_eclasses_=portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	b9131abe556ad2ea96c01b06d658d363
+_md5_=6a2e8364954994e8c884182a137a5a96

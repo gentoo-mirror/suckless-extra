@@ -9,7 +9,7 @@ DESCRIPTION="suckless init"
 HOMEPAGE="https://core.suckless.org/sinit"
 SRC_URI="https://dl.suckless.org/${PN}/${P}.tar.gz"
 
-S="${S%-1.1}"
+S="${WORKDIR}"/"${PN}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -30,7 +30,7 @@ src_prepare() {
 	default
 
 	sed -i \
-		-e "s/ -Os / /" \
+		-e "s/ -Os//" \
 		-e "/^\(LDFLAGS\|CFLAGS\|CPPFLAGS\)/{s| = | += |g;s|-s ||g}" \
 		config.mk
 }

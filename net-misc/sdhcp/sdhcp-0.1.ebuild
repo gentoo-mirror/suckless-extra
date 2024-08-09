@@ -10,7 +10,7 @@ HOMEPAGE="https://core.suckless.org/sdhcp
 https://git.2f30.org/sdhcp/files.html"
 SRC_URI="https://dl.2f30.org/releases/${P}.tar.gz"
 
-S="${S%-0.1}"
+S="${WORKDIR}"/"${PN}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -18,14 +18,13 @@ KEYWORDS="~amd64"
 
 src_unpack() {
 	cd "${WORKDIR}"
-	tar xf "${WORKDIR}"/../distdir/sdhcp-0.1.tar.gz
+	tar xf "${WORKDIR}"/../distdir/"${P}".tar.gz
 }
 
 src_prepare() {
 	default
 
 	sed -i \
-		-e "s/ -Os / /" \
 		-e "/^\(LDFLAGS\|CFLAGS\|CPPFLAGS\)/{s| = | += |g;s|-s ||g}" \
 		config.mk
 }
