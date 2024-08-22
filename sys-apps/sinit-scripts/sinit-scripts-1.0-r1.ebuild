@@ -61,5 +61,5 @@ pkg_postinst() {
 	elog " -< Succeeded. Now you can reboot >- "
 	echo
 	[ -f ${ROOT}/etc/hostname ] ||
-	ewarn "File ${ROOT}/etc/hostname is missing. Copy /etc/localhost or create one"
+	ewarn "File ${ROOT}/etc/hostname is missing. Copy ${ROOT}/etc/localhost or create one"
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>plat@stellar-nexus.ru</email>
+<name>Plat</name>
+</maintainer>
+<longdescription>
+xscreenshot is a simple X11 screenshot utility. It writes farbfeld image data to stdout.
+</longdescription>
+</pkgmetadata>
