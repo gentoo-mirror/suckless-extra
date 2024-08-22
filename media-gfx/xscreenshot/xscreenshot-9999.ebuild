@@ -22,6 +22,15 @@ SLOT="0"
 DEPEND="x11-libs/libX11"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	default
+
+	sed -i \
+		-e '/^INCS/{s:/usr/X11R6/include:/usr/include/X11:}' \
+		-e "/^LIBS/{s:/usr/X11R6/lib:/usr/$(get_libdir)/X11:}" \
+		Makefile || die
+}
+
 src_compile() {
 	filter-flags -Wl,--as-needed
 	emake CC="$(tc-getCC)"
