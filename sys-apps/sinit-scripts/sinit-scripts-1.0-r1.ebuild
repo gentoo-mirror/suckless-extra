@@ -58,6 +58,8 @@ pkg_postinst() {
 	ewarn "ln -s /var/rc/service_name /etc/rc/"
 	ewarn "# Add \"log 'service_name'\" (optionally) and \"lk_runsvc /etc/rc/service_name 0\" to /etc/rc/dtinit/dtinit.sh"
 	echo
+	ewarn "If you have not done that already, please delete /sbin/poweroff, /sbin/reboot and /sbin/shutdown before emerging this package"
+	echo
 	elog " -< Succeeded. Now you can reboot >- "
 	echo
 	[ -f ${ROOT}/etc/hostname ] ||
