@@ -2,13 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <upstream>
-<remote-id type="github">pickfire/spt</remote-id>
+<remote-id type="github">Gottox/bgs</remote-id>
 </upstream>
 <maintainer type="person">
 <email>plat@stellar-nexus.ru</email>
 <name>Plat</name>
 </maintainer>
 <longdescription>
-spt is a simple timer that uses the pomodoro technique that doubles your efficiency.
+bgs - back ground setter
+========================
+bgs is an extremely fast and small background setter for X.
 </longdescription>
 </pkgmetadata>
