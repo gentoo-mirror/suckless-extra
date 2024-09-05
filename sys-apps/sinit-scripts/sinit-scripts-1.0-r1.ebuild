@@ -44,21 +44,23 @@ src_install() {
 }
 
 pkg_postinst() {
-	ln -s /sbin/shutdown /sbin/reboot
-	ln -s /sbin/shutdown /sbin/poweroff
-	ln -s /var/rc/* /etc/rc/
+	ln -s ${ROOT}/sbin/sinit ${ROOT}/sbin/init
+	ln -s ${ROOT}/sbin/shutdown ${ROOT}/sbin/reboot
+	ln -s ${ROOT}/sbin/shutdown ${ROOT}/sbin/poweroff
+	ln -s ${ROOT}/var/rc/* ${ROOT}/etc/rc/
 	echo
 	ewarn "You may need to add new services."
 	ewarn "To add new services run:"
-	ewarn "mkdir /var/rc/service_name"
-	ewarn "touch /var/rc/service_name/run # main execution script for the service."
+	ewarn "mkdir ${ROOT}/var/rc/service_name"
+	ewarn "touch ${ROOT}/var/rc/service_name/run # main execution script for the service."
 	ewarn "#Note: daemontools-encore is going to restart the service every time it finishes execution of the run file."
 	ewarn "#If you want to avoid this add \"lk_forever 3600\" at the end of the script."
-	ewarn "chmod u+x /var/rc/service_name/run"
-	ewarn "ln -s /var/rc/service_name /etc/rc/"
-	ewarn "# Add \"log 'service_name'\" (optionally) and \"lk_runsvc /etc/rc/service_name 0\" to /etc/rc/dtinit/dtinit.sh"
+	ewarn "chmod u+x ${ROOT}/var/rc/service_name/run"
+	ewarn "ln -s ${ROOT}/var/rc/service_name ${ROOT}/etc/rc/"
+	ewarn "# Add \"log 'service_name'\" (optionally) and \"lk_runsvc ${ROOT}/etc/rc/service_name 0\" to ${ROOT}/etc/rc/dtinit/dtinit.sh"
 	echo
-	ewarn "If you have not done that already, please delete /sbin/poweroff, /sbin/reboot and /sbin/shutdown before emerging this package"
+	ewarn "If you have not done that already, please delete ${ROOT}/sbin/init, ${ROOT}/sbin/poweroff, ${ROOT}/sbin/reboot and ${ROOT}/sbin/shutdown before emerging this package"
+	ewarn "Alternatively, unmerge your current init system and emerge this package again. It is safer to do this in chroot environment"
 	echo
 	elog " -< Succeeded. Now you can reboot >- "
 	echo
