@@ -44,10 +44,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ln -s ${ROOT}/sbin/sinit ${ROOT}/sbin/init
-	ln -s ${ROOT}/sbin/shutdown ${ROOT}/sbin/reboot
-	ln -s ${ROOT}/sbin/shutdown ${ROOT}/sbin/poweroff
-	ln -s ${ROOT}/var/rc/* ${ROOT}/etc/rc/
+	ln -s "${ROOT}"/sbin/sinit "${ROOT}"/sbin/init
+	ln -s "${ROOT}"/sbin/shutdown "${ROOT}"/sbin/reboot
+	ln -s "${ROOT}"/sbin/shutdown "${ROOT}"/sbin/poweroff
+	ln -s "${ROOT}"/var/rc/* "${ROOT}"/etc/rc/
 	echo
 	ewarn "You may need to add new services."
 	ewarn "To add new services run:"
@@ -60,7 +60,7 @@ pkg_postinst() {
 	ewarn "# Add \"log 'service_name'\" (optionally) and \"lk_runsvc ${ROOT}/etc/rc/service_name 0\" to ${ROOT}/etc/rc/dtinit/dtinit.sh"
 	echo
 	ewarn "If you have not done that already, please delete ${ROOT}/sbin/init, ${ROOT}/sbin/poweroff, ${ROOT}/sbin/reboot and ${ROOT}/sbin/shutdown before emerging this package"
-	ewarn "Alternatively, unmerge your current init system and emerge this package again. It is safer to do this in chroot environment"
+	ewarn "Alternatively, unmerge your current init system and emerge this package again. It is safer to do this in a chroot environment"
 	echo
 	elog " -< Succeeded. Now you can reboot >- "
 	echo
