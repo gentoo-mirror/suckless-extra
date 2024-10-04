@@ -1,0 +1,13 @@
+app-admin/rdo 1.4.3: RootDO, a simple doas/sudo alternative.
+app-misc/smatrix 1.0: simple cmatrix clone
+media-gfx/xscreenshot 1.0 9999: screen capture tool
+net-misc/sdhcp 0.1: simple dhcp client
+sys-apps/littkit 0.90: a set of shell scripts to implement oredered-startup and run-once capabilities
+sys-apps/sinit 1.1: suckless init
+sys-apps/sinit-scripts 1.0-r1: Collection of services for suckless init
+x11-misc/bgs 0.8: extremely fast and small background setter for X.
+x11-misc/spt 0.6: simple pomodoro timer
+x11-misc/sselp 0.2: simple print selection
+x11-misc/swarp 0.1: simple pointer warp for X
+x11-misc/xbmouse 0.1: simply bind a mouse button to a command
+x11-misc/xkev 0.1: simply simulate KeyPress/KeyRelease

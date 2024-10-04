@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare unpack
+DESCRIPTION=suckless init
+EAPI=8
+HOMEPAGE=https://core.suckless.org/sinit
+INHERIT=toolchain-funcs
+IUSE=minimal
+KEYWORDS=~amd64
+LICENSE=MIT
+PDEPEND=!minimal? ( sys-apps/sinit-scripts )
+RDEPEND=!minimal? ( sys-process/daemontools-encore ) !minimal? ( sys-apps/littkit )
+SLOT=0
+SRC_URI=https://dl.suckless.org/sinit/sinit-1.1.tar.gz
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991
+_md5_=519ad565a9292f73d17a21ce5ba9381f

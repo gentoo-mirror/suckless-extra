@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=libnotify? ( x11-libs/libnotify x11-libs/libX11 ) x11-libs/libX11
+DESCRIPTION=simple pomodoro timer
+EAPI=8
+HOMEPAGE=https://github.com/pickfire/spt
+INHERIT=toolchain-funcs savedconfig
+IUSE=libnotify savedconfig
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=libnotify? ( x11-libs/libnotify x11-libs/libX11 ) x11-libs/libX11
+SLOT=0
+SRC_URI=https://github.com/pickfire/spt/archive/refs/heads/master.tar.gz -> spt-0.6.tar.gz
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	portability	01f478fa22185b3606f2d4adea4675ed	savedconfig	b9131abe556ad2ea96c01b06d658d363
+_md5_=603ebb90fb7f5734fffc95390459c810
