@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=sys-apps/sinit sys-process/daemontools-encore sys-apps/littkit
 SLOT=0
 SRC_URI=https://github.com/Andrey0189/sinit-scripts/archive/refs/heads/main.tar.gz -> sinit-scripts-1.0.tar.gz
-_eclasses_=portability	01f478fa22185b3606f2d4adea4675ed	savedconfig	b9131abe556ad2ea96c01b06d658d363
+_eclasses_=portability	a39e3d646f76cb45d06b44cc1144b8d4	savedconfig	b9131abe556ad2ea96c01b06d658d363
 _md5_=f2a45953a60376a97d3824ab19fe777d
